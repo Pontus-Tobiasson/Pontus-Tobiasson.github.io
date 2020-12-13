@@ -8,10 +8,106 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Bare - Start Bootstrap Template</title>
+  <title>About Pontus Tobiasson</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+      body {
+          width: 100vw;
+          height: 100vh;
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-rows: auto minmax(0, 1fr);
+      }
+
+      nav {
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      main {
+          grid-row: 2;
+          grid-column: 1;
+          overflow: auto;
+      }
+
+      main::-webkit-scrollbar
+      {
+        width: 8px;
+      }
+
+      main::-webkit-scrollbar-thumb
+      {
+        width: 8px;
+        background: #343a40;
+        border-radius: 10px;
+      }
+
+      .outer-list {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 20px;
+        font-weight: 300;
+        list-style: inside;
+        text-align: left;
+        padding-left: 0;
+      }
+
+      .outer-list li {
+        margin-top: 10px;
+        margin-left: 20px;
+        text-indent: -28px;
+      }
+
+      .project-grid {
+          font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+          font-size: 20px;
+          font-weight: 300;
+          display: inline-grid;
+          grid-template-columns: auto 1fr;
+          grid-template-rows: auto auto;
+          /*max-width: 500px;
+          margin: auto;*/
+          text-align: left;
+      }
+
+      .project-grid > div {
+          padding-right: 12px;
+      }
+
+      .app-image {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .app-image img {
+        width: 240px;
+      }
+
+      @media (min-width: 576px) {
+      }
+
+      @media (min-width: 768px) {
+      }
+
+      @media (min-width: 992px) {
+      }
+
+      @media (min-width: 1670px) {
+        .app-image {
+            position: absolute;
+            right: -250px;
+            margin: 0px;
+        }
+      }
+
+      @media (min-width: 1800px) {
+        .app-image {
+            right: -280px;
+        }
+    }
+  </style>
 
 </head>
 
@@ -44,12 +140,15 @@
   </nav>
 
   <!-- Page Content -->
+  <main>
   <div class="container">
     <div id="Skills" class="row">
       <div class="col-lg-12 text-center">
         <h1 class="mt-5">Pontus Tobiasson</h1>
         <p class="lead">
-              Software engineer with a broad interest within the computer science field. I have a passion for learning and problem solving. I am hungry  to experience what this industry has to offer.
+            Software engineer born 1994 with a broad interest in computer science.
+            I have a passion for learning and problem solving.
+            I am hungry to experience what the industry has to offer.
         </p>
       </div>
     </div>
@@ -57,7 +156,7 @@
       <div class="col-lg-12 text-center">
         <h1 class="mt-5">Skills</h1>
         <p class="lead">
-            I have experience in using Javascript, HTML, CSS, Node.js, React, C++, Java, PHP, Python, MongoDB and MySQL. I am fluent in Swedish and English.
+            I have experience with Javascript, HTML, CSS, Node.js, React, C++, C#, Java, PHP, Python, MongoDB and MySQL. I am fluent in Swedish and English.
         </p>
       </div>
     </div>
@@ -66,14 +165,15 @@
         <h1 class="mt-5">Credentials</h1>
         <h4 class="mt-5">Education</h4>
         <p class="lead">
-            I have studied computer science at Mittunviersitetet and KTH but did not finish my degree. During my studies i finished 243.5 higher education credits.
+            I have studied computer science at <a href="https://www.miun.se/" target="_blank">Mittunviersitetet</a>
+            and <a href="https://www.kth.se" target="_blank">KTH</a>.
+            During my studies I finished 243.5 higher education credits.
         </p>
         <h4 class="mt-5">Work</h4>
         <p class="lead">
-            I am currently working as a developer at Webfalken.
-            During my time here I have developed and maintained websites.
-            I have worked on a team and had to learn how to efficiently split our resources for the task at hand.
-            I also kept close contact with customers to ensure satisfaction with the final product.
+            I am currently working at <a href="https://www.webfalken.se" target="_blank">Webfalken</a>, where I develop and maintain web sites.
+            My time at Webfalken has given me many insights about how to work efficiently as a team.
+            I'm keeping close contact with customers to ensure their satisfaction with the delivered product.
         </p>
       </div>
     </div>
@@ -81,39 +181,99 @@
       <div class="col-lg-12 text-center">
         <h1 class="mt-5">Projects</h1>
         <p class="lead">
-            If you want to test run any of these projects please be aware that heroku takes a couple of seconds to start their servers after someone requests to use one of their hosted applications.
+            This section is a showcase of code I have developed. The full source code is available on <a href="https://github.com/Pontus-Tobiasson" target="_blank">GitHub</a>
+            and the applications are hosted on <a href="https://www.heroku.com" target="_blank">Heroku</a>.
+        </p>
+        <p class="lead">
+            If you want to run any of these projects, please be aware that Heroku shuts down the server when it has been inactive for a while (on their free hosting offers). It therefore takes a few seconds before the server starts delivering content.
         </p>
         <h4 class="mt-5">Shopping list</h4>
+        <div class="app-image"><img src="shoplist.png"></div>
         <p class="lead">
-            A full stack application that allows the user to add, edit and delete products from a database. The user can search among products by searching for a specific name or by category. Products can be added to a cart and even printed out to create a shopping list. <br/>
-            The client is written using JavaScript, React, HTML and CSS,. The server uses Node.js and Express. The database uses MongoDB. <br/>
-            The code is available at <a href="https://github.com/Pontus-Tobiasson/Shopping-List">https://github.com/Pontus-Tobiasson/Shopping-List</a>. <br/>
-            The application is available to be tested at <a href="https://pontus-shopping-list.herokuapp.com/">https://pontus-shopping-list.herokuapp.com/</a>. <br/>
-            The database for the running demo is hosted at <a href="https://www.mongodb.com/">https://www.mongodb.com/</a>. <br/>
+            The <em>Shopping List</em> is an application that creates shopping lists.
+            The user can search for groceries by name and category, and select the number of units to purchase.
+            The resulting list can be printed. Groceries can be created, updated and removed.
+        </p>
+        <p class="lead">
+            The application is responsive.
+            The <em>wide view</em> shows the categories, groceries and shopping list side-by-side.
+            In the <em>mid-sized view</em> the shopping list slides in and out on demand.
+            In the <em>narrow view</em> the category list becomes a dropdown list.
+        </p>
+        <div>
+      </div>
+        <p class="lead"> The Shopping List is a full stack application built on several technologies:</p>
+        <div style="max-width: 500px; margin: auto; align-self: center;">
+            <ul class="outer-list">
+                <li>The grocercy data is stored in MongoDB, with full CRUD access</li>
+                <li style="margin-top: 10px;">The server uses:</li>
+                <ul class="inner-list">
+                  <li><a href="https://nodejs.org/en/" target="_blank">Node.js</a></li>
+                  <li><a href="https://www.npmjs.com/package/express" target="_blank">Express</a></li>
+                  <li><a href="https://www.npmjs.com/package/sharp" target="_blank">Sharp</a> to convert dropped images to png thumbnails</li>
+                  <li><a href="https://www.npmjs.com/package/formidable" target="_blank">Formidable</a> to simplify form data processing</li>
+                </ul>
+                <li>The client uses:</li>
+                <ul class="inner-list">
+                  <li>React</li>
+                  <li>HTML5 drag and drop to update grocery thumbnails</li>
+                  <li>HTML5 canvas to preview dropped images before saving them in the database</li>
+                </ul>
+            </ul>
+            <p class="lead">
+                <div class="project-grid">
+                    <div>Code:</div>
+                    <a href="https://github.com/Pontus-Tobiasson/Shopping-List" target="_blank">https://github.com/Pontus-Tobiasson/Shopping-List</a>
+                    <div>Demo:</div>
+                    <a href="https://pontus-shopping-list.herokuapp.com/" target="_blank">https://pontus-shopping-list.herokuapp.com/</a>
+                </div>
+            </p>
+        </div>
+        <p class="lead">
+            The demo database is hosted at <a href="https://www.mongodb.com/" target="_blank">https://www.mongodb.com/</a>.
         </p>
         <h4 class="mt-5">Currency converter</h4>
+        <div class="app-image"><img src="currency.png"></div>
         <p class="lead">
-            Single-page application for currency conversion that uses the Exchange rates API to fetch data as the user requests it. When the client receives data from the server it dynamically rewrites the content of the webpage instead of reloading the page. <br/>
-            The application is written using JavaScript, HTML and CSS. <br/>
-            The code is available at <a href="https://github.com/Pontus-Tobiasson/Currency-Converter">https://github.com/Pontus-Tobiasson/Currency-Converter</a>. <br/>
-            The application is available to be tested at <a href="https://pontus-currency-converter.herokuapp.com/">https://pontus-currency-converter.herokuapp.com/</a>.
+            The <em>Currency converter</em> is a single-page application that shows currency exchange rates.
+            The rates are retrived from <a href="api.exchangeratesapi.io" target="_blank">api.exchangeratesapi.io</a>, published by the
+            <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank">
+                European Central Bank
+            </a>
+        </p>
+        <p class="lead">
+            The application is built exclusively with JavaScript, HTML and CSS. No external libraries or frameworks has been used.
+        </p>
+        <p class="lead">
+            <div class="project-grid">
+                <div>Code:</div>
+                <a href="https://github.com/Pontus-Tobiasson/Currency-Converter" target="_blank">https://github.com/Pontus-Tobiasson/Currency-Converter</a>
+                <div>Demo:</div>
+                <a href="https://pontus-currency-converter.herokuapp.com/" target="_blank">https://pontus-currency-converter.herokuapp.com/</a>
+            </div>
         </p>
         <h4 class="mt-5">Form validation</h4>
+        <div class="app-image"><img src="form-validation.png"></div>
         <p class="lead">
-            An application that uses regular expressions to verify that the user inputs valid data into the forms input fields. <br/>
-            The application is written using JavaScript, HTML and CSS. <br/>
-            The code is available at <a href="https://github.com/Pontus-Tobiasson/Form-Validation">https://github.com/Pontus-Tobiasson/Form-Validation</a>. <br/>
-            The application is available to be tested at <a href="https://pontus-form-validation.herokuapp.com/">https://pontus-form-validation.herokuapp.com/</a>.
+            The <em>Form validation</em> project is a simple application that uses regular expressions to verify that the user enters valid input.
+            <br/>
+        </p>
+        <p class="lead">
+            <div class="project-grid">
+                <div>Code:</div><a href="https://github.com/Pontus-Tobiasson/Form-Validation" target="_blank">https://github.com/Pontus-Tobiasson/Form-Validation</a>
+                <div>Demo:</div><a href="https://pontus-form-validation.herokuapp.com/" target="_blank">https://pontus-form-validation.herokuapp.com/</a>
+            </div>
         </p>
       </div>
     </div>
     <div id="Contact" class="row">
       <div class="col-lg-12 text-center">
-        <h1 class="mt-5">Cotanct</h1>
-        <p class="lead">Contact me at Pontustobiasson@gmail.com.</p>
+        <h1 class="mt-5">Contact</h1>
+        <p class="lead">Contact me at <a href="mailto:pontustobiasson@gmail.com">pontustobiasson@gmail.com</a>.</p>
       </div>
     </div>
   </div>
+  </main>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
